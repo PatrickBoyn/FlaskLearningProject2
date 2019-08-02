@@ -8,3 +8,8 @@ api = Api(app)
 class Student(Reesource):
     def get(self, name):
         return {'student': name}
+
+
+api.add_resource(Student, '/student/<string:name>')
+
+app.run()
