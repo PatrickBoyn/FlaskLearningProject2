@@ -9,9 +9,7 @@ items = []
 
 class Item(Resource):
     def get(self, name):
-        for item in items:
-            if item['name'] == name:
-                return item
+        item = filter(lambda x: x['name'] == name, items)
         return {'item': '404 Not found'}, 404
 
     def post(self, name):
