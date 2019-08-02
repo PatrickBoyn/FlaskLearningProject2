@@ -12,7 +12,7 @@ class Item(Resource):
         for item in items:
             if item['name'] == name:
                 return item
-        return {'item': 'Not found'}
+        return {'item': 'Not found'}, 404
 
     def post(self, name):
         item = {'name': name, 'price': 12.00}
