@@ -5,7 +5,7 @@ app = Flask(__name__)
 api = Api(app)
 
 
-class Student(Reesource):
+class Student(Resource):
     def get(self, name):
         return {'student': name}
 
