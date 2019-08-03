@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
+app_secret_key = '132409875782345892345098723458902345987234583346=-01-1=--+65'
 api = Api(app)
 
 items = []
