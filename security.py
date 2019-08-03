@@ -1,11 +1,7 @@
 from user import User
 
 users = [
-    {
-        'id': 1,
-        'username': 'patrick',
-        'password': 'asdf'
-    }
+    User(1, 'patrick', 'asdf')
 ]
 
 username_mapping = {'patrick': {'id': 1,
