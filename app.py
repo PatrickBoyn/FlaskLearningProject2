@@ -28,10 +28,11 @@ class Item(Resource):
         return {'item': item}, 200 if item else 404
 
     def post(self, name):
-        data = Item.parser.parse_args()
 
         if next(filter(lambda x: x['name'] == name, items), None) is not None:
             return {'Error': '{} already exists'.format(name)}, 400
+
+        data = Item.parser.parse_args()
 
         item = {'name': name, 'price': data['price']}
         items.append(item)
@@ -44,9 +45,9 @@ class Item(Resource):
         return {'message': 'Item deleted.'}, 204
 
     def put(self, name):
-        data = Item.parser.parse_args()
 
         item = next(filter(lambda x: x['name'] == name, items), None)
+        data = Item.parser.parse_args()
 
         if item is None:
             item = {'name': name, 'price': data['price']}
