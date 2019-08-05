@@ -18,7 +18,7 @@ insert_query = 'INSERT INTO users VALUES (?, ?, ?)'
 
 cursor.execute(insert_query, user)
 
-user = [
+users = [
     (2, 'bob', 'asdf'),
     (3, 'jane', 'asdf'),
     (4, 'george', 'asdf')
