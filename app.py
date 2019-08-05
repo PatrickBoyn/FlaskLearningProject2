@@ -5,6 +5,7 @@ from flask_jwt import JWT, jwt_required
 from security import authenticate, identity
 
 app = Flask(__name__)
+# In a real app store it someplace else.
 app.secret_key = '132409875782345892345098723458902345987234583346'
 api = Api(app)
 
@@ -23,7 +24,7 @@ class Item(Resource):
         return {'item': item}, 200 if item else 404
 
     def post(self, name):
-        if next(filter(lambda x: x['name'] == name, item), None) is not None:
+        if next(filter(lambda x: x['name'] == name, items), None) is not None:
             return {'Error': '{} already exists'.format(name)}, 400
 
         data = request.get_json()
