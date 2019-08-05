@@ -16,6 +16,12 @@ user = (1, 'patrick', 'asdf')
 # The question marks will be replaced by the user.
 insert_query = 'INSERT INTO users VALUES (?, ?, ?)'
 
+user = [
+    (2, 'bob', 'asdf'),
+    (3, 'jane', 'asdf'),
+    (4, 'george', 'asdf')
+]
+
 cursor.execute(insert_query, user)
 
 connection.commit()
