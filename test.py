@@ -7,3 +7,5 @@ cursor = connection.cursor()
 
 create_table = 'CREATE TABLE users (id int, username text, password text)'
 cursor.execute(create_table)
+
+print('Finished created the table.')
