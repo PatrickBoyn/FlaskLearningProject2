@@ -58,7 +58,7 @@ class UserRegister(Resource):
         cursor = connection.cursor()
 
         query = 'INSERT INTO users VALUES (NULL, ?, ?)'
-        cursor.execute(data['username', data['password']])
+        cursor.execute(query, (data['username'], data['password']))
 
         connection.commit()
         connection.close()
