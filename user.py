@@ -42,11 +42,9 @@ class User:
         connection.close()
         return user
 
-# TODO check to see if this works.
-
 
 class UserRegister(Resource):
-
+    # TODO check to see if this works.
     parser = reqparse.RequestParser()
     parser.add_argument('username', type=str, required=True,
                         help="This field can't be left blank.")
