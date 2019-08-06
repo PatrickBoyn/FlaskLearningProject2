@@ -1,5 +1,5 @@
 import sqlite3
-from flask_restful import Resource, parser
+from flask_restful import Resource, reqparse
 
 
 class User:
